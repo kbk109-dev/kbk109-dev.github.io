@@ -1,0 +1,296 @@
+/* =====================================================
+   EDGE AI APP SERVICES — Legal Pages Stylesheet
+   Shared by: privacy-policy/, terms-of-service/
+   ===================================================== */
+
+/* ── Legal Hero (compact) ─────────────────────────── */
+.legal-hero {
+  padding: 8rem 1.5rem 3.5rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.legal-hero-badge {
+  margin-bottom: 1.25rem;
+}
+
+.legal-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin-bottom: 0.875rem;
+}
+
+.legal-hero-meta {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  letter-spacing: 0.04em;
+}
+
+.legal-hero-meta span {
+  color: var(--color-cyan);
+}
+
+/* ── Legal Layout ─────────────────────────────────── */
+.legal-layout {
+  padding: 3.5rem 0 6rem;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ── TOC Sidebar ──────────────────────────────────── */
+.toc {
+  position: sticky;
+  top: 6rem;
+  background: var(--color-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+}
+
+.toc-title {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.toc-list a {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  padding: 0.35rem 0.625rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background 0.2s ease;
+  display: block;
+}
+
+.toc-list a:hover {
+  color: var(--color-cyan);
+  background: var(--color-cyan-dim);
+}
+
+.toc-back {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-family: var(--font-heading);
+  color: var(--color-text-muted);
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  transition: color 0.2s ease;
+}
+
+.toc-back:hover {
+  color: var(--color-white);
+}
+
+/* ── Article ──────────────────────────────────────── */
+.legal-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.legal-section {
+  background: var(--color-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  transition: border-color 0.25s ease;
+}
+
+.legal-section:hover {
+  border-color: var(--color-border-hover);
+}
+
+.legal-section-num {
+  font-size: 0.68rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-cyan);
+  margin-bottom: 0.4rem;
+}
+
+.legal-section h2 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.legal-section p {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 0.875rem;
+}
+
+.legal-section p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section ul,
+.legal-section ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.875rem;
+}
+
+.legal-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.legal-section ul li {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.75;
+  padding: 0.35rem 0 0.35rem 1.25rem;
+  position: relative;
+}
+
+.legal-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-cyan);
+  opacity: 0.7;
+}
+
+.legal-section ol {
+  list-style: decimal;
+}
+
+.legal-section ol li {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.75;
+  padding-left: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* App tag inside legal sections */
+.app-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.app-tag.amber {
+  background: var(--color-amber-dim);
+  color: var(--color-amber);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+}
+
+.app-tag.blue {
+  background: var(--color-blue-dim);
+  color: var(--color-blue);
+  border: 1px solid rgba(59, 130, 246, 0.28);
+}
+
+/* Sub-section (per-app block) */
+.legal-subsection {
+  margin-top: 1.125rem;
+  padding: 1.125rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--color-border);
+}
+
+.legal-subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-subsection p {
+  margin-bottom: 0.5rem;
+}
+
+.legal-subsection ul {
+  margin-bottom: 0;
+}
+
+/* Contact block */
+.legal-contact-block {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--color-cyan-dim);
+  border: 1px solid rgba(0, 198, 224, 0.22);
+}
+
+.legal-contact-block a {
+  color: var(--color-cyan);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.legal-contact-block a:hover {
+  opacity: 0.8;
+}
+
+/* ── Responsive ───────────────────────────────────── */
+@media (max-width: 820px) {
+  .legal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toc {
+    position: static;
+  }
+}
+
+@media (max-width: 640px) {
+  .legal-hero {
+    padding: 7rem 1.5rem 2.5rem;
+  }
+
+  .legal-section {
+    padding: 1.5rem 1.25rem;
+  }
+}
