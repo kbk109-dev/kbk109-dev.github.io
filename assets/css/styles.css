@@ -20,6 +20,8 @@
   --color-amber-dim:     rgba(245, 158, 11, 0.12);
   --color-blue:          #3B82F6;
   --color-blue-dim:      rgba(59, 130, 246, 0.12);
+  --color-indigo:        #818CF8;
+  --color-indigo-dim:    rgba(129, 140, 248, 0.12);
 
   /* Text */
   --color-text:          #94A3B8;
@@ -47,6 +49,7 @@
   --shadow-glow-cyan:    0 0 60px rgba(0, 198, 224, 0.18);
   --shadow-glow-amber:   0 0 60px rgba(245, 158, 11, 0.15);
   --shadow-glow-blue:    0 0 60px rgba(59, 130, 246, 0.18);
+  --shadow-glow-indigo:  0 0 60px rgba(129, 140, 248, 0.18);
 }
 
 /* ── Reset ────────────────────────────────────────── */
@@ -148,6 +151,12 @@ ul { list-style: none; }
   animation: drift-c 11s ease-in-out infinite;
 }
 
+.orb-indigo {
+  background: radial-gradient(circle, var(--color-indigo) 0%, transparent 65%);
+  opacity: 0.12;
+  animation: drift-d 13s ease-in-out infinite;
+}
+
 @keyframes drift-a {
   0%, 100% { transform: translate(0, 0); }
   33%       { transform: translate(40px, -25px); }
@@ -163,6 +172,12 @@ ul { list-style: none; }
 @keyframes drift-c {
   0%, 100% { transform: translate(0, 0); }
   50%       { transform: translate(25px, 35px); }
+}
+
+@keyframes drift-d {
+  0%, 100% { transform: translate(0, 0); }
+  35%       { transform: translate(-30px, 40px); }
+  65%       { transform: translate(35px, -15px); }
 }
 
 /* ── Glass Card ───────────────────────────────────── */
@@ -197,7 +212,8 @@ ul { list-style: none; }
 
 .badge-cyan  { background: var(--color-cyan-dim);  color: var(--color-cyan);  border: 1px solid rgba(0, 198, 224, 0.28); }
 .badge-amber { background: var(--color-amber-dim); color: var(--color-amber); border: 1px solid rgba(245, 158, 11, 0.28); }
-.badge-blue  { background: var(--color-blue-dim);  color: var(--color-blue);  border: 1px solid rgba(59, 130, 246, 0.28); }
+.badge-blue   { background: var(--color-blue-dim);  color: var(--color-blue);  border: 1px solid rgba(59, 130, 246, 0.28); }
+.badge-indigo { background: var(--color-indigo-dim); color: var(--color-indigo); border: 1px solid rgba(129, 140, 248, 0.28); }
 
 /* ── NAV ──────────────────────────────────────────── */
 .nav {
@@ -477,6 +493,17 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
+.glow-indigo::before {
+  content: '';
+  position: absolute;
+  top: -250px;
+  right: -200px;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 /* App info column */
 .app-info .section-badge { margin-bottom: 1.25rem; }
 .app-info .app-title     { margin-bottom: 1rem; }
@@ -517,7 +544,8 @@ ul { list-style: none; }
 
 .feature-icon.amber { background: var(--color-amber-dim); color: var(--color-amber); }
 .feature-icon.blue  { background: var(--color-blue-dim);  color: var(--color-blue); }
-.feature-icon.cyan  { background: var(--color-cyan-dim);  color: var(--color-cyan); }
+.feature-icon.cyan   { background: var(--color-cyan-dim);  color: var(--color-cyan); }
+.feature-icon.indigo { background: var(--color-indigo-dim); color: var(--color-indigo); }
 
 .feature-title {
   font-family: var(--font-heading);
@@ -692,6 +720,79 @@ ul { list-style: none; }
   box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
 }
 
+/* Book list (EdgeBook) */
+.book-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.875rem;
+  flex-shrink: 0;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  background: rgba(129, 140, 248, 0.08);
+  border: 1px solid rgba(129, 140, 248, 0.15);
+}
+
+.book-thumb {
+  width: 28px;
+  height: 36px;
+  border-radius: 3px;
+  background: rgba(129, 140, 248, 0.18);
+  border: 1px solid rgba(129, 140, 248, 0.3);
+  flex-shrink: 0;
+}
+
+.book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-title {
+  font-size: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-author {
+  font-size: 0.4rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: var(--font-heading);
+}
+
+.book-status {
+  font-size: 0.4rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  padding: 0.15rem 0.35rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.book-status.complete {
+  background: rgba(129, 140, 248, 0.18);
+  color: var(--color-indigo);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+}
+
+.book-status.analyzing {
+  background: rgba(0, 198, 224, 0.12);
+  color: var(--color-cyan);
+  border: 1px solid rgba(0, 198, 224, 0.28);
+}
+
 /* Phone stat number */
 .phone-big-stat {
   text-align: center;
@@ -746,7 +847,8 @@ ul { list-style: none; }
 
 .phone-float-badge.amber .fb-val { color: var(--color-amber); }
 .phone-float-badge.cyan  .fb-val { color: var(--color-cyan); }
-.phone-float-badge.blue  .fb-val { color: var(--color-blue); }
+.phone-float-badge.blue   .fb-val { color: var(--color-blue); }
+.phone-float-badge.indigo .fb-val { color: var(--color-indigo); }
 
 .phone-float-badge.pos-tr {
   top: 2.5rem;
