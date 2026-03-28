@@ -231,6 +231,12 @@
   border: 1px solid rgba(59, 130, 246, 0.28);
 }
 
+.app-tag.indigo {
+  background: var(--color-indigo-dim);
+  color: var(--color-indigo);
+  border: 1px solid rgba(129, 140, 248, 0.28);
+}
+
 /* Sub-section (per-app block) */
 .legal-subsection {
   margin-top: 1.125rem;

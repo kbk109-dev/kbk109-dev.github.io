@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>개인정보보호정책 — Edge AI App Services</title>
-  <meta name="description" content="Edge AI App Services 개인정보보호정책. SmileWakeAI 및 PeopleLens 앱은 모든 AI 처리를 기기 내에서 수행하며, 개인 데이터를 서버로 전송하지 않습니다." />
+  <meta name="description" content="Edge AI App Services 개인정보보호정책. SmileWakeAI, PeopleLens 및 EdgeBook 앱은 모든 AI 처리를 기기 내에서 수행하며, 개인 데이터를 서버로 전송하지 않습니다." />
 
   <!-- Google Fonts: Chakra Petch + Work Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,6 +32,7 @@
       <ul class="nav-links" role="list">
         <li><a href="/#smilwakeai">SmileWakeAI</a></li>
         <li><a href="/#peoplelens">PeopleLens</a></li>
+        <li><a href="/#edgebook">EdgeBook</a></li>
         <li>
           <a href="https://github.com/kbk109-dev" target="_blank" rel="noopener noreferrer">
             GitHub
@@ -97,8 +98,9 @@
             <h2 id="overview-heading">개요</h2>
             <p>
               Edge AI App Services("당사", "우리")는 사용자의 개인정보 보호를 최우선으로 생각합니다.
-              본 개인정보보호정책은 당사의 모바일 애플리케이션 <strong style="color: var(--color-heading);">SmileWakeAI</strong> 및
-              <strong style="color: var(--color-heading);">PeopleLens</strong>(이하 "앱")의 사용과 관련하여
+              본 개인정보보호정책은 당사의 모바일 애플리케이션 <strong style="color: var(--color-heading);">SmileWakeAI</strong>,
+              <strong style="color: var(--color-heading);">PeopleLens</strong> 및
+              <strong style="color: var(--color-heading);">EdgeBook</strong>(이하 "앱")의 사용과 관련하여
               어떤 정보가 처리되는지, 그리고 해당 정보가 어떻게 사용되는지를 설명합니다.
             </p>
             <p>
@@ -148,6 +150,20 @@
                 <li><strong style="color: var(--color-heading);">앨범 및 매핑 데이터</strong> — 사용자가 생성한 인물 앨범 및 사진-인물 매핑 정보가 WatermelonDB 로컬 데이터베이스에 저장됩니다.</li>
               </ul>
             </div>
+
+            <!-- EdgeBook subsection -->
+            <div class="legal-subsection">
+              <div class="legal-subsection-title">
+                <span class="app-tag indigo">EdgeBook</span>
+              </div>
+              <p>EdgeBook은 다음의 기기 데이터에 접근합니다:</p>
+              <ul>
+                <li><strong style="color: var(--color-heading);">카메라</strong> — 도서 표지 및 목차 스캔을 위해 사용됩니다. 촬영된 이미지는 기기 내 OCR 처리에만 사용되며 외부로 전송되지 않습니다.</li>
+                <li><strong style="color: var(--color-heading);">OCR 텍스트 데이터</strong> — 온디바이스 OCR을 통해 추출된 도서 제목, 저자명, 목차 텍스트가 기기 내 로컬 데이터베이스에 저장됩니다.</li>
+                <li><strong style="color: var(--color-heading);">AI 요약 데이터</strong> — 온디바이스 AI가 생성한 챕터별 요약문이 기기 내에만 저장됩니다. 요약 생성 과정에서 외부 서버와의 통신은 없습니다.</li>
+                <li><strong style="color: var(--color-heading);">도서 라이브러리 데이터</strong> — 사용자가 스캔한 도서 목록, 분석 진행 상태, 큐레이션된 목차 구조가 기기 내 로컬 저장소에 보관됩니다.</li>
+              </ul>
+            </div>
           </section>
 
           <!-- 3. How We Use Information -->
@@ -156,10 +172,12 @@
             <h2 id="how-use-heading">정보 이용 방법</h2>
             <p>접근된 데이터는 오직 아래의 목적으로만 사용됩니다:</p>
             <ul>
-              <li>앱의 핵심 기능(기상 미션 수행, 수면 추적, 얼굴 인식 갤러리) 제공</li>
+              <li>앱의 핵심 기능(기상 미션 수행, 수면 추적, 얼굴 인식 갤러리, 도서 스캔 및 AI 요약) 제공</li>
               <li>수면 품질 리포트 및 개인화된 분석 데이터 생성</li>
               <li>사용자 사진 라이브러리의 인물별 타임라인 구성</li>
               <li>앱 기능 개선을 위한 기기 내 로컬 분석 (외부 전송 없음)</li>
+              <li>도서 스캔 결과의 OCR 텍스트 추출 및 AI 기반 챕터 요약 생성</li>
+              <li>개인 디지털 도서 라이브러리 구성 및 목차 큐레이션</li>
             </ul>
             <p>
               당사는 사용자 데이터를 마케팅, 광고, 프로파일링 또는 기타 상업적 목적으로
@@ -179,6 +197,7 @@
             <ul>
               <li><strong style="color: var(--color-heading);">SmileWakeAI</strong>: 수면 기록, 알람 설정, 수면 분석 데이터는 기기 내 앱 전용 로컬 데이터베이스에 저장됩니다.</li>
               <li><strong style="color: var(--color-heading);">PeopleLens</strong>: 얼굴 임베딩 벡터, 앨범 정보, 사진-인물 매핑 데이터는 WatermelonDB를 통해 기기 내에만 저장됩니다.</li>
+              <li><strong style="color: var(--color-heading);">EdgeBook</strong>: 도서 스캔 데이터, OCR 추출 텍스트, AI 요약문, 목차 큐레이션 데이터는 기기 내 앱 전용 로컬 데이터베이스에 저장됩니다.</li>
             </ul>
             <p>
               앱을 삭제하면 앱과 관련된 모든 로컬 데이터가 기기에서 완전히 삭제됩니다.
@@ -199,6 +218,8 @@
               <li><strong style="color: var(--color-heading);">InsightFace (buffalo_l 모델)</strong> — PeopleLens에서 512차원 얼굴 임베딩 생성에 사용. 기기 내에서만 실행됩니다.</li>
               <li><strong style="color: var(--color-heading);">TensorFlow Lite (MoveNet)</strong> — SmileWakeAI에서 포즈 추정 및 신체 동작 인식에 사용. 기기 내에서만 실행됩니다.</li>
               <li><strong style="color: var(--color-heading);">WatermelonDB</strong> — PeopleLens의 로컬 데이터베이스로 사용. 기기 내 저장소에만 데이터를 기록합니다.</li>
+              <li><strong style="color: var(--color-heading);">온디바이스 OCR 엔진</strong> — EdgeBook에서 도서 표지 및 목차의 텍스트 인식에 사용. 모든 처리는 온디바이스로 수행됩니다.</li>
+              <li><strong style="color: var(--color-heading);">온디바이스 AI 요약 모델</strong> — EdgeBook에서 챕터별 텍스트 요약 생성에 사용. 기기 내에서만 실행됩니다.</li>
             </ul>
             <p>
               앱에는 광고 SDK, 분석 서비스(Google Analytics, Firebase Analytics 등),
@@ -246,6 +267,18 @@
               <ul>
                 <li><strong style="color: var(--color-heading);">READ_MEDIA_IMAGES</strong> — 갤러리 사진에 접근하여 얼굴 감지 및 앨범 구성</li>
                 <li><strong style="color: var(--color-heading);">READ_EXTERNAL_STORAGE</strong> — (Android 12 이하) 사진 라이브러리 접근</li>
+              </ul>
+            </div>
+
+            <div class="legal-subsection">
+              <div class="legal-subsection-title">
+                <span class="app-tag indigo">EdgeBook</span>
+              </div>
+              <ul>
+                <li><strong style="color: var(--color-heading);">CAMERA</strong> — 도서 표지 및 목차 페이지 스캔</li>
+                <li><strong style="color: var(--color-heading);">READ_MEDIA_IMAGES</strong> — 스캔된 도서 이미지 접근 (Android 13 이상)</li>
+                <li><strong style="color: var(--color-heading);">READ_EXTERNAL_STORAGE</strong> — (Android 12 이하) 스캔 이미지 접근</li>
+                <li><strong style="color: var(--color-heading);">POST_NOTIFICATIONS</strong> — AI 요약 완료 알림 표시</li>
               </ul>
             </div>
 
