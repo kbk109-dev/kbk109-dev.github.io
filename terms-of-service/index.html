@@ -30,9 +30,6 @@
         Edge AI
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="/#smilwakeai">SmileWakeAI</a></li>
-        <li><a href="/#peoplelens">PeopleLens</a></li>
-        <li><a href="/#edgebook">EdgeBook</a></li>
         <li>
           <a href="https://github.com/kbk109-dev" target="_blank" rel="noopener noreferrer">
             GitHub
@@ -53,12 +50,35 @@
           이용약관
         </span>
       </div>
-      <h1 class="legal-hero-title">Terms of Service</h1>
+      <h1 class="legal-hero-title"><span id="hero-app-name">SmileWakeAI</span> Terms of Service</h1>
       <p class="legal-hero-meta">
         시행일: <span>2026년 3월 14일</span> &nbsp;·&nbsp; 최종 업데이트: <span>2026년 3월 14일</span>
       </p>
     </div>
   </header>
+
+  <!-- ════════════════════════════════════════════════
+       APP SELECTOR
+  ════════════════════════════════════════════════ -->
+  <div class="app-selector" role="region" aria-label="앱 선택">
+    <div class="container">
+      <div class="app-selector-label">앱 선택</div>
+      <div class="app-selector-grid">
+        <button class="app-selector-card active" data-filter="smilewakeai" type="button">
+          <img src="../assets/images/smileWakeAI-icon.png" alt="" class="app-selector-icon" />
+          SmileWakeAI
+        </button>
+        <button class="app-selector-card" data-filter="peoplelens" type="button">
+          <img src="../assets/images/peoplelens-icon.png" alt="" class="app-selector-icon" />
+          PeopleLens
+        </button>
+        <button class="app-selector-card" data-filter="edgebook" type="button">
+          <img src="../assets/images/edgebook-icon.png" alt="" class="app-selector-icon" />
+          EdgeBook
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- ════════════════════════════════════════════════
        LEGAL CONTENT
@@ -98,11 +118,19 @@
           <section class="legal-section" id="acceptance" aria-labelledby="acceptance-heading">
             <div class="legal-section-num">Section 01</div>
             <h2 id="acceptance-heading">약관 동의</h2>
-            <p>
+            <p data-app="smilewakeai">
               본 이용약관(이하 "약관")은 Edge AI App Services(이하 "당사")가 제공하는
-              모바일 애플리케이션 <strong style="color: var(--color-heading);">SmileWakeAI</strong>,
-              <strong style="color: var(--color-heading);">PeopleLens</strong> 및
-              <strong style="color: var(--color-heading);">EdgeBook</strong>(이하 통칭 "앱" 또는 "서비스")
+              모바일 애플리케이션 <strong style="color: var(--color-amber);">SmileWakeAI</strong>(이하 "앱" 또는 "서비스")
+              이용에 관한 조건과 당사와 사용자 간의 권리·의무 관계를 규정합니다.
+            </p>
+            <p data-app="peoplelens">
+              본 이용약관(이하 "약관")은 Edge AI App Services(이하 "당사")가 제공하는
+              모바일 애플리케이션 <strong style="color: var(--color-blue);">PeopleLens</strong>(이하 "앱" 또는 "서비스")
+              이용에 관한 조건과 당사와 사용자 간의 권리·의무 관계를 규정합니다.
+            </p>
+            <p data-app="edgebook">
+              본 이용약관(이하 "약관")은 Edge AI App Services(이하 "당사")가 제공하는
+              모바일 애플리케이션 <strong style="color: var(--color-indigo);">EdgeBook</strong>(이하 "앱" 또는 "서비스")
               이용에 관한 조건과 당사와 사용자 간의 권리·의무 관계를 규정합니다.
             </p>
             <p>
@@ -119,9 +147,9 @@
           <section class="legal-section" id="service-description" aria-labelledby="service-heading">
             <div class="legal-section-num">Section 02</div>
             <h2 id="service-heading">서비스 설명</h2>
-            <p>당사는 다음 세 가지 모바일 애플리케이션을 제공합니다:</p>
+            <p>당사는 다음의 모바일 애플리케이션을 제공합니다:</p>
 
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="smilewakeai">
               <div class="legal-subsection-title">
                 <span class="app-tag amber">SmileWakeAI</span>
               </div>
@@ -134,7 +162,7 @@
               </p>
             </div>
 
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="peoplelens">
               <div class="legal-subsection-title">
                 <span class="app-tag blue">PeopleLens</span>
               </div>
@@ -146,7 +174,7 @@
               </p>
             </div>
 
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="edgebook">
               <div class="legal-subsection-title">
                 <span class="app-tag indigo">EdgeBook</span>
               </div>
@@ -168,7 +196,9 @@
             <ul>
               <li>개인적, 비상업적 목적의 앱 기능 이용</li>
               <li>본 약관의 범위 내에서의 앱 설치 및 실행</li>
-              <li>앱이 제공하는 기능(알람, 수면 추적, 갤러리 정리, 도서 스캔 및 요약)의 정상적인 사용</li>
+              <li data-app="smilewakeai">앱이 제공하는 기능(알람, 수면 추적, 기상 미션)의 정상적인 사용</li>
+              <li data-app="peoplelens">앱이 제공하는 기능(얼굴 인식, 갤러리 정리, 인물 앨범)의 정상적인 사용</li>
+              <li data-app="edgebook">앱이 제공하는 기능(도서 스캔, AI 요약, 라이브러리 관리)의 정상적인 사용</li>
               <li>지원이 필요한 경우 당사에 문의</li>
             </ul>
           </section>
@@ -181,9 +211,11 @@
             <ul>
               <li>앱 또는 앱의 구성 요소를 역공학(Reverse Engineering), 역컴파일, 역어셈블하거나 소스 코드 추출을 시도하는 행위</li>
               <li>앱의 전부 또는 일부를 무단으로 복제, 배포, 판매하거나 상업적으로 이용하는 행위</li>
-              <li>앱에 포함된 AI 모델(MoveNet TFLite, InsightFace buffalo_l, Google ML Kit, EdgeBook OCR·요약 모델)을 무단으로 추출하거나 재배포하는 행위</li>
+              <li data-app="smilewakeai">앱에 포함된 AI 모델(MoveNet TFLite)을 무단으로 추출하거나 재배포하는 행위</li>
+              <li data-app="peoplelens">앱에 포함된 AI 모델(InsightFace buffalo_l, Google ML Kit)을 무단으로 추출하거나 재배포하는 행위</li>
+              <li data-app="edgebook">앱에 포함된 AI 모델(OCR 엔진, AI 요약 모델)을 무단으로 추출하거나 재배포하는 행위</li>
               <li>앱의 보안 기능을 우회하거나 앱의 정상 동작을 방해하는 행위</li>
-              <li>타인의 동의 없이 해당 인물의 사진이나 얼굴 데이터를 앱을 통해 처리하는 행위</li>
+              <li data-app="peoplelens">타인의 동의 없이 해당 인물의 사진이나 얼굴 데이터를 앱을 통해 처리하는 행위</li>
               <li>법령 또는 공서양속에 반하는 목적으로 앱을 사용하는 행위</li>
               <li>본 약관에서 명시적으로 허용되지 않은 방식으로 앱을 이용하는 행위</li>
             </ul>
@@ -201,9 +233,16 @@
               본 약관은 사용자에게 앱의 비독점적, 양도 불가능한, 개인적 이용 목적의 제한된 라이선스를
               부여합니다. 이 라이선스는 앱의 소유권을 이전하지 않습니다.
             </p>
-            <p>
-              앱에 사용된 오픈소스 라이브러리(TensorFlow Lite, InsightFace, Google ML Kit,
-              WatermelonDB, EdgeBook OCR 엔진 등)는 각 라이브러리의 오픈소스 라이선스 조건에 따릅니다.
+            <p data-app="smilewakeai">
+              앱에 사용된 오픈소스 라이브러리(TensorFlow Lite 등)는 각 라이브러리의 오픈소스 라이선스 조건에 따릅니다.
+              해당 라이선스 정보는 앱 내 설정 화면에서 확인할 수 있습니다.
+            </p>
+            <p data-app="peoplelens">
+              앱에 사용된 오픈소스 라이브러리(InsightFace, Google ML Kit, WatermelonDB 등)는 각 라이브러리의 오픈소스 라이선스 조건에 따릅니다.
+              해당 라이선스 정보는 앱 내 설정 화면에서 확인할 수 있습니다.
+            </p>
+            <p data-app="edgebook">
+              앱에 사용된 오픈소스 라이브러리(OCR 엔진, AI 요약 모델 등)는 각 라이브러리의 오픈소스 라이선스 조건에 따릅니다.
               해당 라이선스 정보는 앱 내 설정 화면에서 확인할 수 있습니다.
             </p>
           </section>
@@ -218,14 +257,25 @@
             </p>
             <ul>
               <li>앱이 항상 오류 없이, 중단 없이 작동한다는 보증</li>
-              <li>AI 기능(포즈 추정, 수면 단계 감지, 얼굴 인식)의 결과가 항상 정확하다는 보증</li>
-              <li>수면 추적 데이터가 의학적·임상적 목적에 적합하다는 보증</li>
-              <li>얼굴 인식 결과가 특정 목적(예: 신원 확인)에 적합하다는 보증</li>
+              <li data-app="smilewakeai">AI 기능(포즈 추정, 수면 단계 감지)의 결과가 항상 정확하다는 보증</li>
+              <li data-app="smilewakeai">수면 추적 데이터가 의학적·임상적 목적에 적합하다는 보증</li>
+              <li data-app="peoplelens">AI 기능(얼굴 감지, 얼굴 인식 매칭)의 결과가 항상 정확하다는 보증</li>
+              <li data-app="peoplelens">얼굴 인식 결과가 특정 목적(예: 신원 확인)에 적합하다는 보증</li>
+              <li data-app="edgebook">AI 기능(OCR 텍스트 인식, 챕터 요약)의 결과가 항상 정확하다는 보증</li>
+              <li data-app="edgebook">AI 요약 결과가 학술적·전문적 목적에 적합하다는 보증</li>
               <li>앱이 모든 기기 및 운영체제 버전에서 완벽히 호환된다는 보증</li>
             </ul>
-            <p>
-              SmileWakeAI의 수면 추적 및 SmileWakeAI의 기상 미션 기능은 건강 보조 목적으로만 제공되며,
+            <p data-app="smilewakeai">
+              수면 추적 및 기상 미션 기능은 건강 보조 목적으로만 제공되며,
               의료적 진단이나 처방을 대체할 수 없습니다.
+            </p>
+            <p data-app="peoplelens">
+              얼굴 인식 기능은 개인 사진 정리 목적으로만 제공되며,
+              신원 확인이나 보안 인증 목적으로 사용할 수 없습니다.
+            </p>
+            <p data-app="edgebook">
+              AI 요약 기능은 참고 목적으로만 제공되며,
+              원문을 완전히 대체하거나 학술적 인용 자료로 사용할 수 없습니다.
             </p>
           </section>
 
@@ -240,7 +290,9 @@
             <ul>
               <li>앱의 사용 또는 사용 불가로 인한 직접적·간접적·부수적·특별 손해</li>
               <li>AI 기능의 오류 또는 부정확한 결과로 인한 손해</li>
-              <li>기기 내 데이터(사진, 수면 기록 등)의 손실 또는 손상</li>
+              <li data-app="smilewakeai">기기 내 데이터(수면 기록, 알람 설정 등)의 손실 또는 손상</li>
+              <li data-app="peoplelens">기기 내 데이터(사진, 얼굴 임베딩, 앨범 등)의 손실 또는 손상</li>
+              <li data-app="edgebook">기기 내 데이터(도서 라이브러리, 요약 데이터 등)의 손실 또는 손상</li>
               <li>앱 업데이트, 변경 또는 서비스 중단으로 인한 손해</li>
               <li>사용자의 앱 이용 방식으로 인해 발생한 제3자와의 분쟁</li>
             </ul>
@@ -356,6 +408,7 @@
 
   <!-- Scripts -->
   <script>
+    // Nav scroll
     (function () {
       const nav = document.getElementById('nav');
       const onScroll = () => {
@@ -363,6 +416,31 @@
       };
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
+    })();
+
+    // App selector filtering
+    (function () {
+      const cards = document.querySelectorAll('.app-selector-card');
+      const heroName = document.getElementById('hero-app-name');
+      const nameMap = { smilewakeai: 'SmileWakeAI', peoplelens: 'PeopleLens', edgebook: 'EdgeBook' };
+
+      function applyFilter(filter) {
+        document.querySelectorAll('[data-app]').forEach(function (el) {
+          el.classList.toggle('filter-hidden', el.dataset.app !== filter);
+        });
+        if (heroName) heroName.textContent = nameMap[filter] || '';
+      }
+
+      cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          cards.forEach(function (c) { c.classList.remove('active'); });
+          card.classList.add('active');
+          applyFilter(card.dataset.filter);
+        });
+      });
+
+      var activeCard = document.querySelector('.app-selector-card.active');
+      if (activeCard) applyFilter(activeCard.dataset.filter);
     })();
   </script>
 

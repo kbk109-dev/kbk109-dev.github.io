@@ -30,9 +30,6 @@
         Edge AI
       </a>
       <ul class="nav-links" role="list">
-        <li><a href="/#smilwakeai">SmileWakeAI</a></li>
-        <li><a href="/#peoplelens">PeopleLens</a></li>
-        <li><a href="/#edgebook">EdgeBook</a></li>
         <li>
           <a href="https://github.com/kbk109-dev" target="_blank" rel="noopener noreferrer">
             GitHub
@@ -53,12 +50,35 @@
           개인정보보호정책
         </span>
       </div>
-      <h1 class="legal-hero-title">Privacy Policy</h1>
+      <h1 class="legal-hero-title"><span id="hero-app-name">SmileWakeAI</span> Privacy Policy</h1>
       <p class="legal-hero-meta">
         시행일: <span>2026년 3월 14일</span> &nbsp;·&nbsp; 최종 업데이트: <span>2026년 3월 14일</span>
       </p>
     </div>
   </header>
+
+  <!-- ════════════════════════════════════════════════
+       APP SELECTOR
+  ════════════════════════════════════════════════ -->
+  <div class="app-selector" role="region" aria-label="앱 선택">
+    <div class="container">
+      <div class="app-selector-label">앱 선택</div>
+      <div class="app-selector-grid">
+        <button class="app-selector-card active" data-filter="smilewakeai" type="button">
+          <img src="../assets/images/smileWakeAI-icon.png" alt="" class="app-selector-icon" />
+          SmileWakeAI
+        </button>
+        <button class="app-selector-card" data-filter="peoplelens" type="button">
+          <img src="../assets/images/peoplelens-icon.png" alt="" class="app-selector-icon" />
+          PeopleLens
+        </button>
+        <button class="app-selector-card" data-filter="edgebook" type="button">
+          <img src="../assets/images/edgebook-icon.png" alt="" class="app-selector-icon" />
+          EdgeBook
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- ════════════════════════════════════════════════
        LEGAL CONTENT
@@ -96,11 +116,19 @@
           <section class="legal-section" id="overview" aria-labelledby="overview-heading">
             <div class="legal-section-num">Section 01</div>
             <h2 id="overview-heading">개요</h2>
-            <p>
+            <p data-app="smilewakeai">
               Edge AI App Services("당사", "우리")는 사용자의 개인정보 보호를 최우선으로 생각합니다.
-              본 개인정보보호정책은 당사의 모바일 애플리케이션 <strong style="color: var(--color-heading);">SmileWakeAI</strong>,
-              <strong style="color: var(--color-heading);">PeopleLens</strong> 및
-              <strong style="color: var(--color-heading);">EdgeBook</strong>(이하 "앱")의 사용과 관련하여
+              본 개인정보보호정책은 당사의 모바일 애플리케이션 <strong style="color: var(--color-amber);">SmileWakeAI</strong>(이하 "앱")의 사용과 관련하여
+              어떤 정보가 처리되는지, 그리고 해당 정보가 어떻게 사용되는지를 설명합니다.
+            </p>
+            <p data-app="peoplelens">
+              Edge AI App Services("당사", "우리")는 사용자의 개인정보 보호를 최우선으로 생각합니다.
+              본 개인정보보호정책은 당사의 모바일 애플리케이션 <strong style="color: var(--color-blue);">PeopleLens</strong>(이하 "앱")의 사용과 관련하여
+              어떤 정보가 처리되는지, 그리고 해당 정보가 어떻게 사용되는지를 설명합니다.
+            </p>
+            <p data-app="edgebook">
+              Edge AI App Services("당사", "우리")는 사용자의 개인정보 보호를 최우선으로 생각합니다.
+              본 개인정보보호정책은 당사의 모바일 애플리케이션 <strong style="color: var(--color-indigo);">EdgeBook</strong>(이하 "앱")의 사용과 관련하여
               어떤 정보가 처리되는지, 그리고 해당 정보가 어떻게 사용되는지를 설명합니다.
             </p>
             <p>
@@ -124,7 +152,7 @@
             </p>
 
             <!-- SmileWakeAI subsection -->
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="smilewakeai">
               <div class="legal-subsection-title">
                 <span class="app-tag amber">SmileWakeAI</span>
               </div>
@@ -138,7 +166,7 @@
             </div>
 
             <!-- PeopleLens subsection -->
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="peoplelens">
               <div class="legal-subsection-title">
                 <span class="app-tag blue">PeopleLens</span>
               </div>
@@ -152,7 +180,7 @@
             </div>
 
             <!-- EdgeBook subsection -->
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="edgebook">
               <div class="legal-subsection-title">
                 <span class="app-tag indigo">EdgeBook</span>
               </div>
@@ -171,13 +199,23 @@
             <div class="legal-section-num">Section 03</div>
             <h2 id="how-use-heading">정보 이용 방법</h2>
             <p>접근된 데이터는 오직 아래의 목적으로만 사용됩니다:</p>
-            <ul>
-              <li>앱의 핵심 기능(기상 미션 수행, 수면 추적, 얼굴 인식 갤러리, 도서 스캔 및 AI 요약) 제공</li>
-              <li>수면 품질 리포트 및 개인화된 분석 데이터 생성</li>
-              <li>사용자 사진 라이브러리의 인물별 타임라인 구성</li>
+            <ul data-app="smilewakeai">
+              <li>AI 기상 미션(스쿼트, 점프, 스트레칭, 표정·사물 인식) 수행</li>
+              <li>가속도계 기반 수면 단계 감지 및 수면 품질 리포트 생성</li>
+              <li>주변 소음 감지를 통한 알람 볼륨 자동 조절</li>
               <li>앱 기능 개선을 위한 기기 내 로컬 분석 (외부 전송 없음)</li>
-              <li>도서 스캔 결과의 OCR 텍스트 추출 및 AI 기반 챕터 요약 생성</li>
+            </ul>
+            <ul data-app="peoplelens">
+              <li>사진 갤러리 내 얼굴 감지 및 인물별 자동 분류</li>
+              <li>얼굴 임베딩 기반 고정밀 매칭으로 인물 타임라인 앨범 구성</li>
+              <li>EXIF 메타데이터를 활용한 시간순 사진 정렬</li>
+              <li>앱 기능 개선을 위한 기기 내 로컬 분석 (외부 전송 없음)</li>
+            </ul>
+            <ul data-app="edgebook">
+              <li>도서 표지 및 목차 스캔을 통한 OCR 텍스트 추출</li>
+              <li>온디바이스 AI 기반 챕터별 요약 생성</li>
               <li>개인 디지털 도서 라이브러리 구성 및 목차 큐레이션</li>
+              <li>앱 기능 개선을 위한 기기 내 로컬 분석 (외부 전송 없음)</li>
             </ul>
             <p>
               당사는 사용자 데이터를 마케팅, 광고, 프로파일링 또는 기타 상업적 목적으로
@@ -195,9 +233,9 @@
               클라우드 인프라를 보유하지 않습니다.
             </p>
             <ul>
-              <li><strong style="color: var(--color-heading);">SmileWakeAI</strong>: 수면 기록, 알람 설정, 수면 분석 데이터는 기기 내 앱 전용 로컬 데이터베이스에 저장됩니다.</li>
-              <li><strong style="color: var(--color-heading);">PeopleLens</strong>: 얼굴 임베딩 벡터, 앨범 정보, 사진-인물 매핑 데이터는 WatermelonDB를 통해 기기 내에만 저장됩니다.</li>
-              <li><strong style="color: var(--color-heading);">EdgeBook</strong>: 도서 스캔 데이터, OCR 추출 텍스트, AI 요약문, 목차 큐레이션 데이터는 기기 내 앱 전용 로컬 데이터베이스에 저장됩니다.</li>
+              <li data-app="smilewakeai">수면 기록, 알람 설정, 수면 분석 데이터는 기기 내 앱 전용 로컬 데이터베이스에 저장됩니다.</li>
+              <li data-app="peoplelens">얼굴 임베딩 벡터, 앨범 정보, 사진-인물 매핑 데이터는 WatermelonDB를 통해 기기 내에만 저장됩니다.</li>
+              <li data-app="edgebook">도서 스캔 데이터, OCR 추출 텍스트, AI 요약문, 목차 큐레이션 데이터는 기기 내 앱 전용 로컬 데이터베이스에 저장됩니다.</li>
             </ul>
             <p>
               앱을 삭제하면 앱과 관련된 모든 로컬 데이터가 기기에서 완전히 삭제됩니다.
@@ -214,12 +252,12 @@
               이들 라이브러리는 모두 기기 내에서 실행되며 외부 서버와 통신하지 않습니다:
             </p>
             <ul>
-              <li><strong style="color: var(--color-heading);">Google ML Kit (Face Detection)</strong> — PeopleLens에서 사진 내 얼굴 영역 감지에 사용. 모든 처리는 온디바이스로 수행됩니다.</li>
-              <li><strong style="color: var(--color-heading);">InsightFace (buffalo_l 모델)</strong> — PeopleLens에서 512차원 얼굴 임베딩 생성에 사용. 기기 내에서만 실행됩니다.</li>
-              <li><strong style="color: var(--color-heading);">TensorFlow Lite (MoveNet)</strong> — SmileWakeAI에서 포즈 추정 및 신체 동작 인식에 사용. 기기 내에서만 실행됩니다.</li>
-              <li><strong style="color: var(--color-heading);">WatermelonDB</strong> — PeopleLens의 로컬 데이터베이스로 사용. 기기 내 저장소에만 데이터를 기록합니다.</li>
-              <li><strong style="color: var(--color-heading);">온디바이스 OCR 엔진</strong> — EdgeBook에서 도서 표지 및 목차의 텍스트 인식에 사용. 모든 처리는 온디바이스로 수행됩니다.</li>
-              <li><strong style="color: var(--color-heading);">온디바이스 AI 요약 모델</strong> — EdgeBook에서 챕터별 텍스트 요약 생성에 사용. 기기 내에서만 실행됩니다.</li>
+              <li data-app="smilewakeai"><strong style="color: var(--color-heading);">TensorFlow Lite (MoveNet)</strong> — 포즈 추정 및 신체 동작 인식에 사용. 기기 내에서만 실행됩니다.</li>
+              <li data-app="peoplelens"><strong style="color: var(--color-heading);">Google ML Kit (Face Detection)</strong> — 사진 내 얼굴 영역 감지에 사용. 모든 처리는 온디바이스로 수행됩니다.</li>
+              <li data-app="peoplelens"><strong style="color: var(--color-heading);">InsightFace (buffalo_l 모델)</strong> — 512차원 얼굴 임베딩 생성에 사용. 기기 내에서만 실행됩니다.</li>
+              <li data-app="peoplelens"><strong style="color: var(--color-heading);">WatermelonDB</strong> — 로컬 데이터베이스로 사용. 기기 내 저장소에만 데이터를 기록합니다.</li>
+              <li data-app="edgebook"><strong style="color: var(--color-heading);">온디바이스 OCR 엔진</strong> — 도서 표지 및 목차의 텍스트 인식에 사용. 모든 처리는 온디바이스로 수행됩니다.</li>
+              <li data-app="edgebook"><strong style="color: var(--color-heading);">온디바이스 AI 요약 모델</strong> — 챕터별 텍스트 요약 생성에 사용. 기기 내에서만 실행됩니다.</li>
             </ul>
             <p>
               앱에는 광고 SDK, 분석 서비스(Google Analytics, Firebase Analytics 등),
@@ -245,9 +283,11 @@
           <section class="legal-section" id="permissions" aria-labelledby="permissions-heading">
             <div class="legal-section-num">Section 07</div>
             <h2 id="permissions-heading">앱 권한</h2>
-            <p>각 앱이 요청하는 기기 권한과 그 목적은 다음과 같습니다:</p>
+            <p data-app="smilewakeai">SmileWakeAI가 요청하는 기기 권한과 그 목적은 다음과 같습니다:</p>
+            <p data-app="peoplelens">PeopleLens가 요청하는 기기 권한과 그 목적은 다음과 같습니다:</p>
+            <p data-app="edgebook">EdgeBook이 요청하는 기기 권한과 그 목적은 다음과 같습니다:</p>
 
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="smilewakeai">
               <div class="legal-subsection-title">
                 <span class="app-tag amber">SmileWakeAI</span>
               </div>
@@ -260,7 +300,7 @@
               </ul>
             </div>
 
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="peoplelens">
               <div class="legal-subsection-title">
                 <span class="app-tag blue">PeopleLens</span>
               </div>
@@ -270,7 +310,7 @@
               </ul>
             </div>
 
-            <div class="legal-subsection">
+            <div class="legal-subsection" data-app="edgebook">
               <div class="legal-subsection-title">
                 <span class="app-tag indigo">EdgeBook</span>
               </div>
@@ -368,6 +408,7 @@
 
   <!-- Scripts -->
   <script>
+    // Nav scroll
     (function () {
       const nav = document.getElementById('nav');
       const onScroll = () => {
@@ -375,6 +416,31 @@
       };
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
+    })();
+
+    // App selector filtering
+    (function () {
+      const cards = document.querySelectorAll('.app-selector-card');
+      const heroName = document.getElementById('hero-app-name');
+      const nameMap = { smilewakeai: 'SmileWakeAI', peoplelens: 'PeopleLens', edgebook: 'EdgeBook' };
+
+      function applyFilter(filter) {
+        document.querySelectorAll('[data-app]').forEach(function (el) {
+          el.classList.toggle('filter-hidden', el.dataset.app !== filter);
+        });
+        if (heroName) heroName.textContent = nameMap[filter] || '';
+      }
+
+      cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          cards.forEach(function (c) { c.classList.remove('active'); });
+          card.classList.add('active');
+          applyFilter(card.dataset.filter);
+        });
+      });
+
+      var activeCard = document.querySelector('.app-selector-card.active');
+      if (activeCard) applyFilter(activeCard.dataset.filter);
     })();
   </script>
 
